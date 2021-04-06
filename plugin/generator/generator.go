@@ -12,9 +12,9 @@ import (
 
 	"github.com/docker/docker/api/types"
 	"github.com/docker/docker/api/types/swarm"
-	"github.com/mam/caddy-docker-proxy/plugin/v2/caddyfile"
-	"github.com/mam/caddy-docker-proxy/plugin/v2/config"
-	"github.com/mam/caddy-docker-proxy/plugin/v2/docker"
+	"github.com/mam/caddy-docker-proxy/plugin/v3/caddyfile"
+	"github.com/mam/caddy-docker-proxy/plugin/v3/config"
+	"github.com/mam/caddy-docker-proxy/plugin/v3/docker"
 )
 
 // DefaultLabelPrefix for caddy labels in docker

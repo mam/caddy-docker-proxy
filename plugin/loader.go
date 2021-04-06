@@ -15,9 +15,9 @@ import (
 	"github.com/docker/docker/api/types"
 	"github.com/docker/docker/api/types/filters"
 	"github.com/docker/docker/client"
-	"github.com/mam/caddy-docker-proxy/plugin/v2/config"
-	"github.com/mam/caddy-docker-proxy/plugin/v2/docker"
-	"github.com/mam/caddy-docker-proxy/plugin/v2/generator"
+	"github.com/mam/caddy-docker-proxy/plugin/v3/config"
+	"github.com/mam/caddy-docker-proxy/plugin/v3/docker"
+	"github.com/mam/caddy-docker-proxy/plugin/v3/generator"
 )
 
 // DockerLoader generates caddy files from docker swarm information
