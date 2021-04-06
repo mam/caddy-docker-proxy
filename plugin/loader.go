@@ -15,9 +15,9 @@ import (
 	"github.com/docker/docker/api/types"
 	"github.com/docker/docker/api/types/filters"
 	"github.com/docker/docker/client"
-	"github.com/lucaslorentz/caddy-docker-proxy/plugin/v2/config"
-	"github.com/lucaslorentz/caddy-docker-proxy/plugin/v2/docker"
-	"github.com/lucaslorentz/caddy-docker-proxy/plugin/v2/generator"
+	"github.com/mam/caddy-docker-proxy/plugin/v2/config"
+	"github.com/mam/caddy-docker-proxy/plugin/v2/docker"
+	"github.com/mam/caddy-docker-proxy/plugin/v2/generator"
 )
 
 // DockerLoader generates caddy files from docker swarm information
@@ -215,9 +215,9 @@ func (dockerLoader *DockerLoader) updateServer(wg *sync.WaitGroup, server string
 
 	log.Printf("[INFO] Sending configuration to %v", server)
 
-	url := "http://" + server + ":2019/load"
+	url := "http://" + getAdminListen(dockerLoader.options) + ":2019/load"
 
-	postBody, err := addAdminListen(dockerLoader.lastJSONConfig, "tcp/"+server+":2019")
+	postBody, err := addAdminListen(dockerLoader.lastJSONConfig, getAdminListen(dockerLoader.options))
 	if err != nil {
 		log.Printf("[ERROR] Failed to add admin listen to %v: %s", server, err)
 		return
