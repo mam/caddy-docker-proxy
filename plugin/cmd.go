@@ -108,7 +108,7 @@ func getAdminListen(options *config.Options) string {
 			}
 		}
 	}
-	return "tcp/localhost:2019"
+	return "localhost:2019"
 }
 
 func createOptions(flags caddycmd.Flags) *config.Options {
