@@ -215,7 +215,7 @@ func (dockerLoader *DockerLoader) updateServer(wg *sync.WaitGroup, server string
 
 	log.Printf("[INFO] Sending configuration to %v", server)
 
-	url := "http://" + getAdminListen(dockerLoader.options) + ":2019/load"
+	url := "http://" + getAdminListen(dockerLoader.options) + "/load"
 
 	postBody, err := addAdminListen(dockerLoader.lastJSONConfig, getAdminListen(dockerLoader.options))
 	if err != nil {

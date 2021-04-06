@@ -96,12 +96,12 @@ func getAdminListen(options *config.Options) string {
 				switch v := a.(type) {
 				case *net.IPAddr:
 					if options.ControllerNetwork.Contains(v.IP) {
-						return "tcp/" + v.IP.String() + ":2019"
+						return v.IP.String() + ":2019"
 					}
 					break
 				case *net.IPNet:
 					if options.ControllerNetwork.Contains(v.IP) {
-						return "tcp/" + v.IP.String() + ":2019"
+						return v.IP.String() + ":2019"
 					}
 					break
 				}
