@@ -5,7 +5,7 @@ import (
 
 	"github.com/docker/docker/api/types"
 	"github.com/docker/docker/api/types/network"
-	"github.com/lucaslorentz/caddy-docker-proxy/plugin/v2/config"
+	"github.com/mam/caddy-docker-proxy/plugin/v3/config"
 )
 
 func TestContainers_TemplateData(t *testing.T) {

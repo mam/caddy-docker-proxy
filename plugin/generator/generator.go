@@ -11,11 +11,17 @@ import (
 
 	"github.com/docker/docker/api/types"
 	"github.com/docker/docker/api/types/swarm"
+<<<<<<< HEAD
 	"github.com/lucaslorentz/caddy-docker-proxy/plugin/v2/caddyfile"
 	"github.com/lucaslorentz/caddy-docker-proxy/plugin/v2/config"
 	"github.com/lucaslorentz/caddy-docker-proxy/plugin/v2/docker"
 
 	"go.uber.org/zap"
+=======
+	"github.com/mam/caddy-docker-proxy/plugin/v3/caddyfile"
+	"github.com/mam/caddy-docker-proxy/plugin/v3/config"
+	"github.com/mam/caddy-docker-proxy/plugin/v3/docker"
+>>>>>>> d54a580480f17f951214eb02ae2765045c74e649
 )
 
 // DefaultLabelPrefix for caddy labels in docker

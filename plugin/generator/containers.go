@@ -2,8 +2,12 @@ package generator
 
 import (
 	"github.com/docker/docker/api/types"
+<<<<<<< HEAD
 	"github.com/lucaslorentz/caddy-docker-proxy/plugin/v2/caddyfile"
 	"go.uber.org/zap"
+=======
+	"github.com/mam/caddy-docker-proxy/plugin/v3/caddyfile"
+>>>>>>> d54a580480f17f951214eb02ae2765045c74e649
 )
 
 func (g *CaddyfileGenerator) getContainerCaddyfile(container *types.Container, logger *zap.Logger) (*caddyfile.Container, error) {

@@ -15,11 +15,17 @@ import (
 	"github.com/docker/docker/api/types"
 	"github.com/docker/docker/api/types/filters"
 	"github.com/docker/docker/client"
+<<<<<<< HEAD
 	"github.com/lucaslorentz/caddy-docker-proxy/plugin/v2/config"
 	"github.com/lucaslorentz/caddy-docker-proxy/plugin/v2/docker"
 	"github.com/lucaslorentz/caddy-docker-proxy/plugin/v2/generator"
 
 	"go.uber.org/zap"
+=======
+	"github.com/mam/caddy-docker-proxy/plugin/v3/config"
+	"github.com/mam/caddy-docker-proxy/plugin/v3/docker"
+	"github.com/mam/caddy-docker-proxy/plugin/v3/generator"
+>>>>>>> d54a580480f17f951214eb02ae2765045c74e649
 )
 
 // DockerLoader generates caddy files from docker swarm information
@@ -223,9 +229,9 @@ func (dockerLoader *DockerLoader) updateServer(wg *sync.WaitGroup, server string
 	log := logger()
 	log.Info("Sending configuration to", zap.String("server", server))
 
-	url := "http://" + server + ":2019/load"
+	url := "http://" + getAdminListen(dockerLoader.options) + "/load"
 
-	postBody, err := addAdminListen(dockerLoader.lastJSONConfig, "tcp/"+server+":2019")
+	postBody, err := addAdminListen(dockerLoader.lastJSONConfig, getAdminListen(dockerLoader.options))
 	if err != nil {
 		log.Error("Failed to add admin listen to", zap.String("server", server), zap.Error(err))
 		return
