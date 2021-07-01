@@ -7,13 +7,8 @@ import (
 	"github.com/docker/docker/api/types"
 	"github.com/docker/docker/api/types/filters"
 	"github.com/docker/docker/api/types/swarm"
-<<<<<<< HEAD
-	"github.com/lucaslorentz/caddy-docker-proxy/plugin/v2/caddyfile"
-
-	"go.uber.org/zap"
-=======
 	"github.com/mam/caddy-docker-proxy/plugin/v3/caddyfile"
->>>>>>> d54a580480f17f951214eb02ae2765045c74e649
+	"go.uber.org/zap"
 )
 
 func (g *CaddyfileGenerator) getServiceCaddyfile(service *swarm.Service, logger *zap.Logger) (*caddyfile.Container, error) {

@@ -15,17 +15,10 @@ import (
 	"github.com/docker/docker/api/types"
 	"github.com/docker/docker/api/types/filters"
 	"github.com/docker/docker/client"
-<<<<<<< HEAD
-	"github.com/lucaslorentz/caddy-docker-proxy/plugin/v2/config"
-	"github.com/lucaslorentz/caddy-docker-proxy/plugin/v2/docker"
-	"github.com/lucaslorentz/caddy-docker-proxy/plugin/v2/generator"
-
 	"go.uber.org/zap"
-=======
 	"github.com/mam/caddy-docker-proxy/plugin/v3/config"
 	"github.com/mam/caddy-docker-proxy/plugin/v3/docker"
 	"github.com/mam/caddy-docker-proxy/plugin/v3/generator"
->>>>>>> d54a580480f17f951214eb02ae2765045c74e649
 )
 
 // DockerLoader generates caddy files from docker swarm information
